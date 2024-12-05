@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SearchBar from '../components/SearchBar';
 
 const HomePage: React.FC = () => {
@@ -9,13 +10,20 @@ const HomePage: React.FC = () => {
           Met Art Explorer
         </h1>
         <p className="text-xl text-gray-700 mb-6 italic">
-        Timeless Art, Rediscovered
+          Timeless Art, Rediscovered
         </p>
         <SearchBar />
+        
+        <div className="mt-4">
+        <Link
+  to="/favorites"
+  className="bg-burgundy-500 hover:bg-burgundy-600 text-white px-6 py-3 rounded-lg transition duration-200 focus:outline-none hover:text-white">
+        View Favorites
+        </Link>
+        </div>
       </div>
     </div>
   );
 };
 
 export default HomePage;
-
