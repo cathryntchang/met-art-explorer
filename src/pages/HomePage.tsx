@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
         <div className="mt-4">
         <Link
   to="/favorites"
-  className="bg-burgundy-500 hover:bg-burgundy-600 text-white px-6 py-3 rounded-lg transition duration-200 focus:outline-none hover:text-white">
+  className="bg-burgundy-500 hover:bg-burgundy-600 text-white px-6 py-3 rounded-full transition duration-200 focus:outline-none hover:text-white">
         View Favorites
         </Link>
         </div>
