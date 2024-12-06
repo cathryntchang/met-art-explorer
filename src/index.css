@@ -61,13 +61,13 @@ button:focus-visible {
 
 @layer base {
   .bg-burgundy-500 {
-    background-color: #800020; /* Burgundy color for the button */
+    background-color: #800020; 
   }
   .bg-burgundy-600 {
-    background-color: #660016; /* Slightly darker burgundy for hover */
+    background-color: #660016; 
   }
   .focus:ring-burgundy-400 {
-    ring-color: #800020; /* Burgundy color for the focus ring */
+    ring-color: #800020; 
   }
 }
 

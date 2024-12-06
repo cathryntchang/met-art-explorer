@@ -4,12 +4,10 @@ from flask_cors import CORS
 from datetime import datetime
 import os
 
-# Create and configure the application
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(os.path.abspath(os.path.dirname(__file__)), 'favorites.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# Initialize extensions
 db = SQLAlchemy(app)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
@@ -87,7 +85,6 @@ def remove_favorite(object_id):
         db.session.rollback()
         return jsonify({'error': str(e)}), 500
 
-# Initialize the database
 init_db()
 
 if __name__ == '__main__':

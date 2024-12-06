@@ -17,9 +17,8 @@ const SearchResultsPage: React.FC = () => {
         try {
           const results = await metMuseumApi.searchArtworks(query);
 
-          // Fetch images for first 12 results
           const artworkDetails = await Promise.all(
-            results.objectIDs.slice(0, 13).map(async (objectId: number) => {
+            results.objectIDs.slice(0, 12).map(async (objectId: number) => {
               const details = await metMuseumApi.getArtworkDetails(objectId);
               return {
                 id: objectId,
@@ -57,7 +56,7 @@ const SearchResultsPage: React.FC = () => {
 
   const searchQuery = new URLSearchParams(location.search).get('q') || 'No search query';
 
-  if (loading) return <div className="min-h-screen flex items-center justify-center text-white">Loading...</div>;
+  if (loading) return <div className="min-h-screen flex items-center justify-center text-black">Loading...</div>;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 p-4">
